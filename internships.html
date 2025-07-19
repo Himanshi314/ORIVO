@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Available Internships - ORIVO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: #ebecf0;
+    }
+  </style>
+</head>
+
+<a href="index.html"
+   class="fixed bottom-6 right-6 z-50 rounded-full bg-black text-white px-5 py-3 shadow-lg hover:bg-gray-900 transition-all duration-200 flex items-center gap-2">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9l9-7 9 7M4 10v10a1 1 0 001 1h3m10-11v11a1 1 0 01-1 1h-3m-6 0h6"/>
+  </svg>
+  Home
+</a>
+
+<header id="internships-header" class="fixed top-0 left-1/2 transform -translate-x-1/2 z-40 w-full max-w-2xl">
+  <div class="flex flex-col backdrop-blur-2xl bg-white items-center w-full rounded-b-full shadow-2xl  border border-gray-200 px-8 pt-10 pb-8 transition-all duration-300">
+    <h1 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-4 text-center break-words">
+      Internships for August 2025
+    </h1>
+    <input
+      id="skillSearch"
+      type="text"
+      class="w-full max-w-md rounded-3xl border border-gray-300 px-5 py-3 text-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-400 transition"
+      placeholder="Search by skill (e.g., React, Marketing, Python)..."
+      autocomplete="off"
+    />
+  </div>
+</header>
+<!-- Spacer pushes body content down so nothing is hidden -->
+<div class="h-48 md:h-56"></div>
+  <div class="grid gap-10 md:grid-cols-2 ml-24 mr-24">
+      <!-- Card 1 -->
+      <div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col transition-colors duration-200 hover:bg-[#e0e2e8]">
+        <h2 class="text-xl font-bold mb-1">Software Engineering Intern</h2>
+        <p class="text-gray-600 mb-1">Microsoft India, Bengaluru</p>
+        <div class="flex flex-wrap skills-list text-sm mb-2">
+          <span class="bg-gray-200 px-3 py-1 rounded-full">C++</span><span class="bg-gray-200 px-3 py-1 rounded-full">Azure</span><span class="bg-gray-200 px-3 py-1 rounded-full">Data Structures</span>
+        </div>
+        <span class="text-sm text-gray-500 mb-2">Aug 1–31 • Paid</span>
+        <a href="https://careers.microsoft.com/us/en/job/1577732/Software-Engineering-Intern" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+      </div>
+      <!-- Card 2 -->
+      <div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+        <h2 class="text-xl font-bold mb-1">Data Science Intern</h2>
+        <p class="text-gray-600 mb-1">Amazon, Hyderabad</p>
+        <div class="flex flex-wrap skills-list text-sm mb-2">
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Python</span><span class="bg-gray-200 px-3 py-1 rounded-full">Machine Learning</span><span class="bg-gray-200 px-3 py-1 rounded-full">SQL</span>
+        </div>
+        <span class="text-sm text-gray-500 mb-2">Aug 1–31 • Paid</span>
+        <a href="https://www.amazon.jobs/en/jobs/2511888/data-science-intern" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+      </div>
+      <!-- Card 3 -->
+      <div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+        <h2 class="text-xl font-bold mb-1">Marketing Intern</h2>
+        <p class="text-gray-600 mb-1">Unilever India, Mumbai</p>
+        <div class="flex flex-wrap skills-list text-sm mb-2">
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Marketing Strategy</span><span class="bg-gray-200 px-3 py-1 rounded-full">Content Creation</span><span class="bg-gray-200 px-3 py-1 rounded-full">Excel</span>
+        </div>
+        <span class="text-sm text-gray-500 mb-2">Aug 1–31 • Paid</span>
+        <a href="https://careers.unilever.com/job/mumbai/marketing-intern/34181/64927152288" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+      </div>
+      <!-- Card 4 -->
+      <div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+        <h2 class="text-xl font-bold mb-1">Product Management Intern</h2>
+        <p class="text-gray-600 mb-1">Swiggy, Bangalore</p>
+        <div class="flex flex-wrap skills-list text-sm mb-2">
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Product Sense</span><span class="bg-gray-200 px-3 py-1 rounded-full">SQL</span><span class="bg-gray-200 px-3 py-1 rounded-full">Presentation</span>
+        </div>
+        <span class="text-sm text-gray-500 mb-2">Aug 1–30 • Paid</span>
+        <a href="https://careers.swiggy.com/job-detail/4321" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+      </div>
+      <!-- Card 5 -->
+      <div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+        <h2 class="text-xl font-bold mb-1">UI/UX Design Intern</h2>
+        <p class="text-gray-600 mb-1">Zomato, Gurgaon</p>
+        <div class="flex flex-wrap skills-list text-sm mb-2">
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Figma</span><span class="bg-gray-200 px-3 py-1 rounded-full">User Research</span><span class="bg-gray-200 px-3 py-1 rounded-full">Prototyping</span>
+        </div>
+        <span class="text-sm text-gray-500 mb-2">Aug 5–31 • Paid</span>
+        <a href="https://www.zomato.com/careers/internships" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+      </div>
+      <!-- Card 6 -->
+      <div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+        <h2 class="text-xl font-bold mb-1">Finance Intern</h2>
+        <p class="text-gray-600 mb-1">EY India, Gurgaon</p>
+        <div class="flex flex-wrap skills-list text-sm mb-2">
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Accounting</span><span class="bg-gray-200 px-3 py-1 rounded-full">MS Excel</span><span class="bg-gray-200 px-3 py-1 rounded-full">Communication</span>
+        </div>
+        <span class="text-sm text-gray-500 mb-2">Aug 1–29 • Paid</span>
+        <a href="https://careers.ey.com/job/12488529/finance-intern-gurgaon-in/" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+      </div>
+      <!-- Card 7 -->
+      <div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+        <h2 class="text-xl font-bold mb-1">Content Writing Intern</h2>
+        <p class="text-gray-600 mb-1">YourStory Media, Bengaluru</p>
+        <div class="flex flex-wrap skills-list text-sm mb-2">
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Writing</span><span class="bg-gray-200 px-3 py-1 rounded-full">SEO</span><span class="bg-gray-200 px-3 py-1 rounded-full">Editing</span>
+        </div>
+        <span class="text-sm text-gray-500 mb-2">Aug 1–31 • Paid</span>
+        <a href="https://yourstory.com/careers/job-openings/content-writing-intern" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+      </div>
+      <!-- Card 8 -->
+      <div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+        <h2 class="text-xl font-bold mb-1">HR Intern</h2>
+        <p class="text-gray-600 mb-1">Tata Consultancy Services, Mumbai</p>
+        <div class="flex flex-wrap skills-list text-sm mb-2">
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Recruitment</span><span class="bg-gray-200 px-3 py-1 rounded-full">Excel</span><span class="bg-gray-200 px-3 py-1 rounded-full">Communication</span>
+        </div>
+        <span class="text-sm text-gray-500 mb-2">Aug 1–30 • Paid</span>
+        <a href="https://ibegin.tcs.com/iBegin/jobs/281566/job-details/HR-Intern" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+      </div>
+      <!-- Card 9 -->
+      <div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+        <h2 class="text-xl font-bold mb-1">Business Analyst Intern</h2>
+        <p class="text-gray-600 mb-1">Goldman Sachs, Bengaluru</p>
+        <div class="flex flex-wrap skills-list text-sm mb-2">
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Analysis</span><span class="bg-gray-200 px-3 py-1 rounded-full">Python</span><span class="bg-gray-200 px-3 py-1 rounded-full">Power BI</span>
+        </div>
+        <span class="text-sm text-gray-500 mb-2">Aug 1–29 • Paid</span>
+        <a href="https://www.goldmansachs.com/careers/students/programs/india/summer-analyst-program.html" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+      </div>
+      <!-- Card 10 -->
+      <div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+        <h2 class="text-xl font-bold mb-1">Social Media Intern</h2>
+        <p class="text-gray-600 mb-1">The Glitch, Mumbai</p>
+        <div class="flex flex-wrap skills-list text-sm mb-2">
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Social Media</span><span class="bg-gray-200 px-3 py-1 rounded-full">Copywriting</span><span class="bg-gray-200 px-3 py-1 rounded-full">Analytics</span>
+        </div>
+        <span class="text-sm text-gray-500 mb-2">Aug 4–29 • Paid</span>
+        <a href="https://careers.theglitch.in/jobs/social-media-intern" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+      </div>
+      <div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+        <h2 class="text-xl font-bold mb-1">Backend Development Intern</h2>
+        <p class="text-gray-600 mb-1">Google India, Bangalore</p>
+        <div class="flex flex-wrap skills-list text-sm mb-2">
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Python</span>
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Django</span>
+          <span class="bg-gray-200 px-3 py-1 rounded-full">APIs</span>
+        </div>
+        <span class="text-sm text-gray-500 mb-2">Aug 1–31 • Paid</span>
+        <a href="https://careers.google.com/jobs/results/123456-backend-intern/" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+      </div>
+      <!-- Card 12 -->
+      <div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+        <h2 class="text-xl font-bold mb-1">Frontend Developer Intern</h2>
+        <p class="text-gray-600 mb-1">Infosys, Pune</p>
+        <div class="flex flex-wrap skills-list text-sm mb-2">
+          <span class="bg-gray-200 px-3 py-1 rounded-full">React</span>
+          <span class="bg-gray-200 px-3 py-1 rounded-full">JavaScript</span>
+          <span class="bg-gray-200 px-3 py-1 rounded-full">HTML/CSS</span>
+        </div>
+        <span class="text-sm text-gray-500 mb-2">Aug 1–30 • Paid</span>
+        <a href="https://www.infosys.com/careers/internships.html" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+      </div>
+      <!-- Card 13 -->
+      <div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+        <h2 class="text-xl font-bold mb-1">Business Operations Intern</h2>
+        <p class="text-gray-600 mb-1">Deloitte India, Hyderabad</p>
+        <div class="flex flex-wrap skills-list text-sm mb-2">
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Excel</span>
+          <span class="bg-gray-200 px-3 py-1 rounded-full">PowerPoint</span>
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Operations</span>
+        </div>
+        <span class="text-sm text-gray-500 mb-2">Aug 1–31 • Paid</span>
+        <a href="https://www2.deloitte.com/in/en/pages/careers/articles/deloitte_india_internship.html" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+      </div>
+      <!-- Card 14 -->
+      <div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+        <h2 class="text-xl font-bold mb-1">Cloud Engineering Intern</h2>
+        <p class="text-gray-600 mb-1">Wipro, Gurgaon</p>
+        <div class="flex flex-wrap skills-list text-sm mb-2">
+          <span class="bg-gray-200 px-3 py-1 rounded-full">AWS</span>
+          <span class="bg-gray-200 px-3 py-1 rounded-full">DevOps</span>
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Linux</span>
+        </div>
+        <span class="text-sm text-gray-500 mb-2">Aug 1–30 • Paid</span>
+        <a href="https://careers.wipro.com/internships" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+      </div>
+      <!-- Card 15 -->
+      <div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+        <h2 class="text-xl font-bold mb-1">Machine Learning Intern</h2>
+        <p class="text-gray-600 mb-1">Tata Consultancy Services, Bengaluru</p>
+        <div class="flex flex-wrap skills-list text-sm mb-2">
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Python</span>
+          <span class="bg-gray-200 px-3 py-1 rounded-full">TensorFlow</span>
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Statistics</span>
+        </div>
+        <span class="text-sm text-gray-500 mb-2">Aug 1–31 • Paid</span>
+        <a href="https://www.tcs.com/careers/internships" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+      </div>
+      <!-- Card 16 -->
+      <div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+        <h2 class="text-xl font-bold mb-1">Content Strategy Intern</h2>
+        <p class="text-gray-600 mb-1">NDTV, New Delhi</p>
+        <div class="flex flex-wrap skills-list text-sm mb-2">
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Content Strategy</span>
+          <span class="bg-gray-200 px-3 py-1 rounded-full">SEO</span>
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Writing</span>
+        </div>
+        <span class="text-sm text-gray-500 mb-2">Aug 5–28 • Paid</span>
+        <a href="https://www.ndtv.com/careers/internships" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+      </div>
+      <!-- Card 17 -->
+      <div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+        <h2 class="text-xl font-bold mb-1">Graphic Design Intern</h2>
+        <p class="text-gray-600 mb-1">BYJU'S, Bengaluru</p>
+        <div class="flex flex-wrap skills-list text-sm mb-2">
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Adobe Photoshop</span>
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Illustrator</span>
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Creativity</span>
+        </div>
+        <span class="text-sm text-gray-500 mb-2">Aug 1–29 • Paid</span>
+        <a href="https://byjus.com/careers/internship/" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+      </div>
+      <!-- Card 18 -->
+      <div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+        <h2 class="text-xl font-bold mb-1">HR & Recruitment Intern</h2>
+        <p class="text-gray-600 mb-1">Capgemini, Noida</p>
+        <div class="flex flex-wrap skills-list text-sm mb-2">
+          <span class="bg-gray-200 px-3 py-1 rounded-full">HR</span>
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Recruitment</span>
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Excel</span>
+        </div>
+        <span class="text-sm text-gray-500 mb-2">Aug 1–30 • Paid</span>
+        <a href="https://www.capgemini.com/in-en/careers/internships/" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+      </div>
+      <!-- Card 19 -->
+      <div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+        <h2 class="text-xl font-bold mb-1">Editorial Intern</h2>
+        <p class="text-gray-600 mb-1">The Hindu, Chennai</p>
+        <div class="flex flex-wrap skills-list text-sm mb-2">
+          <span class="bg-gray-200 px-3 py-1 rounded-full">English</span>
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Editing</span>
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Proofreading</span>
+        </div>
+        <span class="text-sm text-gray-500 mb-2">Aug 1–30 • Paid</span>
+        <a href="https://www.thehindu.com/topic/internships/" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+      </div>
+      <!-- Card 20 -->
+      <div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+        <h2 class="text-xl font-bold mb-1">ICT Engineer Intern</h2>
+        <p class="text-gray-600 mb-1">Siemens, Pune</p>
+        <div class="flex flex-wrap skills-list text-sm mb-2">
+          <span class="bg-gray-200 px-3 py-1 rounded-full">IT</span>
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Networking</span>
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Windows/Linux</span>
+        </div>
+        <span class="text-sm text-gray-500 mb-2">Aug 3–29 • Paid</span>
+        <a href="https://new.siemens.com/in/en/company/jobs/search-careers/internships.html" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+      </div>
+      <!-- Card 21 -->
+      <div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+        <h2 class="text-xl font-bold mb-1">Operations Intern</h2>
+        <p class="text-gray-600 mb-1">Uber India, Gurugram</p>
+        <div class="flex flex-wrap skills-list text-sm mb-2">
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Excel</span>
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Analytical Thinking</span>
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Communication</span>
+        </div>
+        <span class="text-sm text-gray-500 mb-2">Aug 1–30 • Paid</span>
+        <a href="https://www.uber.com/global/en/careers/list/119001/operations-intern-india/" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+      </div>
+      <!-- Card 22 -->
+      <div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+        <h2 class="text-xl font-bold mb-1">Product Design Intern</h2>
+        <p class="text-gray-600 mb-1">Adobe India, Noida</p>
+        <div class="flex flex-wrap skills-list text-sm mb-2">
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Adobe XD</span>
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Sketch</span>
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Interaction Design</span>
+        </div>
+        <span class="text-sm text-gray-500 mb-2">Aug 1–31 • Paid</span>
+        <a href="https://www.adobe.com/careers/university.html" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+      </div>
+      <!-- Card 23 -->
+      <div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+        <h2 class="text-xl font-bold mb-1">Software Development Intern</h2>
+        <p class="text-gray-600 mb-1">Flipkart, Bangalore</p>
+        <div class="flex flex-wrap skills-list text-sm mb-2">
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Java</span>
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Algorithms</span>
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Spring Boot</span>
+        </div>
+        <span class="text-sm text-gray-500 mb-2">Aug 5–30 • Paid</span>
+        <a href="https://www.flipkartcareers.com/#!/joblist/internships/" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+      </div>
+      <!-- Card 24 -->
+      <div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+        <h2 class="text-xl font-bold mb-1">Banking Operations Intern</h2>
+        <p class="text-gray-600 mb-1">ICICI Bank, Mumbai</p>
+        <div class="flex flex-wrap skills-list text-sm mb-2">
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Banking</span>
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Excel</span>
+          <span class="bg-gray-200 px-3 py-1 rounded-full">Regulatory</span>
+        </div>
+        <span class="text-sm text-gray-500 mb-2">Aug 1–29 • Paid</span>
+        <a href="https://www.icicicareers.com/interns" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+      </div>
+      <!-- Card 25 -->
+<div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+  <h2 class="text-xl font-bold mb-1">Mechanical Engineering Intern</h2>
+  <p class="text-gray-600 mb-1">Larsen & Toubro, Chennai</p>
+  <div class="flex flex-wrap skills-list text-sm mb-2">
+    <span class="bg-gray-200 px-3 py-1 rounded-full">AutoCAD</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">SolidWorks</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Manufacturing</span>
+  </div>
+  <span class="text-sm text-gray-500 mb-2">Aug 1–29 • Paid</span>
+  <a href="https://www.larsentoubro.com/careers/for-students-and-young-professionals/internships/" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+</div>
+<!-- Card 26 -->
+<div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+  <h2 class="text-xl font-bold mb-1">Electrical Engineering Intern</h2>
+  <p class="text-gray-600 mb-1">Siemens India, Pune</p>
+  <div class="flex flex-wrap skills-list text-sm mb-2">
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Circuit Analysis</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Matlab</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Power Systems</span>
+  </div>
+  <span class="text-sm text-gray-500 mb-2">Aug 1–30 • Paid</span>
+  <a href="https://new.siemens.com/in/en/company/jobs/search-careers/internships.html" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+</div>
+<!-- Card 27 -->
+<div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+  <h2 class="text-xl font-bold mb-1">Web Development Intern</h2>
+  <p class="text-gray-600 mb-1">Cognizant, Bangalore</p>
+  <div class="flex flex-wrap skills-list text-sm mb-2">
+    <span class="bg-gray-200 px-3 py-1 rounded-full">HTML/CSS</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">JavaScript</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">React</span>
+  </div>
+  <span class="text-sm text-gray-500 mb-2">Aug 5–31 • Paid</span>
+  <a href="https://careers.cognizant.com/global/en/internships" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+</div>
+<!-- Card 28 -->
+<div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+  <h2 class="text-xl font-bold mb-1">Digital Marketing Intern</h2>
+  <p class="text-gray-600 mb-1">Tata Communications, Mumbai</p>
+  <div class="flex flex-wrap skills-list text-sm mb-2">
+    <span class="bg-gray-200 px-3 py-1 rounded-full">SEO</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Google Analytics</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Content Marketing</span>
+  </div>
+  <span class="text-sm text-gray-500 mb-2">Aug 1–30 • Paid</span>
+  <a href="https://www.tatacommunications.com/careers/internship/" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+</div>
+<!-- Card 29 -->
+<div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+  <h2 class="text-xl font-bold mb-1">Supply Chain Intern</h2>
+  <p class="text-gray-600 mb-1">Aditya Birla Group, Gurgaon</p>
+  <div class="flex flex-wrap skills-list text-sm mb-2">
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Supply Chain</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">MS Excel</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Logistics</span>
+  </div>
+  <span class="text-sm text-gray-500 mb-2">Aug 1–28 • Paid</span>
+  <a href="https://careers.adityabirla.com/index/internship" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+</div>
+<!-- Card 30 -->
+<div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+  <h2 class="text-xl font-bold mb-1">Civil Engineering Intern</h2>
+  <p class="text-gray-600 mb-1">Shapoorji Pallonji, Mumbai</p>
+  <div class="flex flex-wrap skills-list text-sm mb-2">
+    <span class="bg-gray-200 px-3 py-1 rounded-full">AutoCAD</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Revit</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Project Management</span>
+  </div>
+  <span class="text-sm text-gray-500 mb-2">Aug 1–31 • Paid</span>
+  <a href="https://www.shapoorjipallonji.com/careers/internship-opportunities" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+</div>
+<!-- Card 31 -->
+<div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+  <h2 class="text-xl font-bold mb-1">Finance Analyst Intern</h2>
+  <p class="text-gray-600 mb-1">HDFC Bank, Mumbai</p>
+  <div class="flex flex-wrap skills-list text-sm mb-2">
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Finance</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Valuation</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">MS Excel</span>
+  </div>
+  <span class="text-sm text-gray-500 mb-2">Aug 1–29 • Paid</span>
+  <a href="https://www.hdfcbank.com/aboutus/careers/internships" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+</div>
+<!-- Card 32 -->
+<div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+  <h2 class="text-xl font-bold mb-1">Data Analyst Intern</h2>
+  <p class="text-gray-600 mb-1">Accenture India, Bangalore</p>
+  <div class="flex flex-wrap skills-list text-sm mb-2">
+    <span class="bg-gray-200 px-3 py-1 rounded-full">SQL</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Power BI</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Python</span>
+  </div>
+  <span class="text-sm text-gray-500 mb-2">Aug 2–31 • Paid</span>
+  <a href="https://www.accenture.com/in-en/careers/internships" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+</div>
+<!-- Card 33 -->
+<div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+  <h2 class="text-xl font-bold mb-1">Environmental Science Intern</h2>
+  <p class="text-gray-600 mb-1">The Energy and Resources Institute (TERI), Delhi</p>
+  <div class="flex flex-wrap skills-list text-sm mb-2">
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Research</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Environmental Science</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Writing</span>
+  </div>
+  <span class="text-sm text-gray-500 mb-2">Aug 10–29 • Paid</span>
+  <a href="https://www.teriin.org/careers/internships" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+</div>
+<!-- Card 34 -->
+<div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+  <h2 class="text-xl font-bold mb-1">Legal Internship</h2>
+  <p class="text-gray-600 mb-1">Khaitan & Co., Mumbai</p>
+  <div class="flex flex-wrap skills-list text-sm mb-2">
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Legal Research</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Drafting</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Contracts</span>
+  </div>
+  <span class="text-sm text-gray-500 mb-2">Aug 1–31 • Paid</span>
+  <a href="https://www.khaitanco.com/careers" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+</div>
+<!-- Card 35 -->
+<div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+  <h2 class="text-xl font-bold mb-1">Content Writer Intern</h2>
+  <p class="text-gray-600 mb-1">India Today, Noida</p>
+  <div class="flex flex-wrap skills-list text-sm mb-2">
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Content Writing</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Research</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Editing</span>
+  </div>
+  <span class="text-sm text-gray-500 mb-2">Aug 3–30 • Paid</span>
+  <a href="https://www.indiatoday.in/careers/internships" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+</div>
+<!-- Card 36 -->
+<div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+  <h2 class="text-xl font-bold mb-1">Market Research Intern</h2>
+  <p class="text-gray-600 mb-1">Kantar, Bangalore</p>
+  <div class="flex flex-wrap skills-list text-sm mb-2">
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Market Research</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Surveys</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Presentation</span>
+  </div>
+  <span class="text-sm text-gray-500 mb-2">Aug 2–31 • Paid</span>
+  <a href="https://www.kantar.com/careers/internships" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+</div>
+<!-- Card 37 -->
+<div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+  <h2 class="text-xl font-bold mb-1">Data Entry Intern</h2>
+  <p class="text-gray-600 mb-1">Genpact, Hyderabad</p>
+  <div class="flex flex-wrap skills-list text-sm mb-2">
+    <span class="bg-gray-200 px-3 py-1 rounded-full">MS Excel</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Typing</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Attention to Detail</span>
+  </div>
+  <span class="text-sm text-gray-500 mb-2">Aug 1–31 • Paid</span>
+  <a href="https://www.genpact.com/careers/job/Internship" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+</div>
+<!-- Card 38 -->
+<div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+  <h2 class="text-xl font-bold mb-1">Social Impact Intern</h2>
+  <p class="text-gray-600 mb-1">Teach For India, Chennai</p>
+  <div class="flex flex-wrap skills-list text-sm mb-2">
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Community Engagement</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Teaching</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Documentation</span>
+  </div>
+  <span class="text-sm text-gray-500 mb-2">Aug 5–28 • Paid</span>
+  <a href="https://apply.teachforindia.org/internship" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+</div>
+<!-- Card 39 -->
+<div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+  <h2 class="text-xl font-bold mb-1">HR Operations Intern</h2>
+  <p class="text-gray-600 mb-1">Marriott, Pune</p>
+  <div class="flex flex-wrap skills-list text-sm mb-2">
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Recruitment</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Payroll</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Communication</span>
+  </div>
+  <span class="text-sm text-gray-500 mb-2">Aug 1–29 • Paid</span>
+  <a href="https://careers.marriott.com/global/en/internships" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+</div>
+<!-- Card 40 -->
+<div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+  <h2 class="text-xl font-bold mb-1">AI Research Intern</h2>
+  <p class="text-gray-600 mb-1">IBM India, Bangalore</p>
+  <div class="flex flex-wrap skills-list text-sm mb-2">
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Artificial Intelligence</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Python</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Deep Learning</span>
+  </div>
+  <span class="text-sm text-gray-500 mb-2">Aug 1–31 • Paid</span>
+  <a href="https://www.ibm.com/in-en/employment/internships/" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+</div>
+<!-- Card 41 -->
+<div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+  <h2 class="text-xl font-bold mb-1">Sales and BD Intern</h2>
+  <p class="text-gray-600 mb-1">Godrej Group, Mumbai</p>
+  <div class="flex flex-wrap skills-list text-sm mb-2">
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Sales</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Business Development</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">CRM</span>
+  </div>
+  <span class="text-sm text-gray-500 mb-2">Aug 1–30 • Paid</span>
+  <a href="https://www.godrejcareers.com/job-listings-internship" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+</div>
+<!-- Card 42 -->
+<div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+  <h2 class="text-xl font-bold mb-1">Pharma Research Intern</h2>
+  <p class="text-gray-600 mb-1">Sun Pharma, Gurgaon</p>
+  <div class="flex flex-wrap skills-list text-sm mb-2">
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Pharmaceuticals</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Research</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Lab Work</span>
+  </div>
+  <span class="text-sm text-gray-500 mb-2">Aug 2–31 • Paid</span>
+  <a href="https://sunpharma.com/careers/internships/" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+</div>
+<!-- Card 43 -->
+<div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+  <h2 class="text-xl font-bold mb-1">Event Management Intern</h2>
+  <p class="text-gray-600 mb-1">Wizcraft, Mumbai</p>
+  <div class="flex flex-wrap skills-list text-sm mb-2">
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Event Planning</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Coordination</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Communication</span>
+  </div>
+  <span class="text-sm text-gray-500 mb-2">Aug 1–31 • Paid</span>
+  <a href="https://www.wizcraftworld.com/careers-internship.asp" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+</div>
+<!-- Card 44 -->
+<div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+  <h2 class="text-xl font-bold mb-1">Travel Operations Intern</h2>
+  <p class="text-gray-600 mb-1">Yatra.com, Gurugram</p>
+  <div class="flex flex-wrap skills-list text-sm mb-2">
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Travel</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Operations</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">MS Excel</span>
+  </div>
+  <span class="text-sm text-gray-500 mb-2">Aug 3–28 • Paid</span>
+  <a href="https://www.yatra.com/careers/internship" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+</div>
+<!-- Card 45 -->
+<div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+  <h2 class="text-xl font-bold mb-1">Biomedical Scientist Intern</h2>
+  <p class="text-gray-600 mb-1">Apollo Hospitals, Chennai</p>
+  <div class="flex flex-wrap skills-list text-sm mb-2">
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Biology</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Research</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Laboratory</span>
+  </div>
+  <span class="text-sm text-gray-500 mb-2">Aug 1–30 • Paid</span>
+  <a href="https://www.apollohospitals.com/careers/internships/" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+</div>
+<!-- Card 46 -->
+<div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+  <h2 class="text-xl font-bold mb-1">UI/UX Research Intern</h2>
+  <p class="text-gray-600 mb-1">Cleartrip, Bangalore</p>
+  <div class="flex flex-wrap skills-list text-sm mb-2">
+    <span class="bg-gray-200 px-3 py-1 rounded-full">UX Research</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Wireframing</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Usability Testing</span>
+  </div>
+  <span class="text-sm text-gray-500 mb-2">Aug 6–29 • Paid</span>
+  <a href="https://careers.cleartrip.com/jobs/ui-ux-design-intern/" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+</div>
+<!-- Card 47 -->
+<div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+  <h2 class="text-xl font-bold mb-1">Product Intern</h2>
+  <p class="text-gray-600 mb-1">Urban Company, Gurugram</p>
+  <div class="flex flex-wrap skills-list text-sm mb-2">
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Product Analytics</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Problem Solving</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">SQL</span>
+  </div>
+  <span class="text-sm text-gray-500 mb-2">Aug 1–31 • Paid</span>
+  <a href="https://www.urbancompany.com/internship" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+</div>
+<!-- Card 48 -->
+<div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+  <h2 class="text-xl font-bold mb-1">E-commerce Analyst Intern</h2>
+  <p class="text-gray-600 mb-1">Nykaa, Mumbai</p>
+  <div class="flex flex-wrap skills-list text-sm mb-2">
+    <span class="bg-gray-200 px-3 py-1 rounded-full">E-commerce</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Excel</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Analytics</span>
+  </div>
+  <span class="text-sm text-gray-500 mb-2">Aug 7–30 • Paid</span>
+  <a href="https://www.nykaa.com/careers/internships" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+</div>
+<!-- Card 49 -->
+<div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+  <h2 class="text-xl font-bold mb-1">Data Visualization Intern</h2>
+  <p class="text-gray-600 mb-1">Mu Sigma, Bangalore</p>
+  <div class="flex flex-wrap skills-list text-sm mb-2">
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Data Visualization</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Tableau</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Power BI</span>
+  </div>
+  <span class="text-sm text-gray-500 mb-2">Aug 8–30 • Paid</span>
+  <a href="https://www.mu-sigma.com/careers/internships" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+</div>
+<!-- Card 50 -->
+<div class="internship-card bg-white rounded-2xl shadow-xl p-6 flex flex-col">
+  <h2 class="text-xl font-bold mb-1">Banking Intern</h2>
+  <p class="text-gray-600 mb-1">Axis Bank, Mumbai</p>
+  <div class="flex flex-wrap skills-list text-sm mb-2">
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Banking</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Customer Service</span>
+    <span class="bg-gray-200 px-3 py-1 rounded-full">Compliance</span>
+  </div>
+  <span class="text-sm text-gray-500 mb-2">Aug 1–29 • Paid</span>
+  <a href="https://www.axisbank.com/careers/axis-bank-young-bankers-program" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank" rel="noopener">Apply Now</a>
+</div>
+  </main>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const input = document.getElementById('skillSearch');
+  const cards = Array.from(document.querySelectorAll('.internship-card'));
+
+  input.addEventListener('input', function() {
+    const query = input.value.trim().toLowerCase();
+
+    cards.forEach(card => {
+      const text = card.textContent.toLowerCase();
+      if (query === "" || text.includes(query)) {
+        card.style.display = "";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+});
+</script>
+
+</body>
+</html>
