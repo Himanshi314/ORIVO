@@ -15,50 +15,44 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener('scroll', onScroll);
   onScroll(); // Trigger on page load in case already visible
 });
-// tailwind.config.js
-module.exports = {
-  theme: {
-    extend: {
-      fontFamily: {
-        steiner: ['Steinerlight', 'sans-serif'],
-      },
-    },
-  },
-  plugins: [],
-};
-    fetch('https://internships-api.p.rapidapi.com/active-jb-7d', {
-  headers: {
-    'X-API-Key': 'your_api_key' // Only if key is required
-  }
-})
-  .then(response => response.json())
-  .then(data => {
-    const container = document.getElementById('opportunities-list');
-    container.innerHTML = '';
-    data.forEach(opportunity => {
-      const card = document.createElement('div');
-      card.className = 'bg-white rounded-2xl shadow-xl p-6 mb-6';
-      card.innerHTML = `
-        <h2 class="text-xl font-bold mb-2">${opportunity.title}</h2>
-        <p class="text-gray-600 mb-2">${opportunity.company_name}</p>
-        <span class="text-sm text-gray-500 mb-4">${opportunity.location}</span>
-        <a href="${opportunity.url}" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition" target="_blank">Apply Now</a>
-      `;
-      container.appendChild(card);
-    });
-  })
-  .catch(error => {
-    console.error('Failed to fetch internships:', error);
+// Example for sign up
+document.getElementById('signupForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const name = e.target[0].value;
+  const email = e.target[1].value;
+  const password = e.target[2].value;
+
+  const response = await fetch('http://localhost:4000/auth/signup', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name, email, password })
   });
-const card = document.createElement('div');
-card.className = 'bg-white rounded-2xl shadow-xl p-6 mb-6';
-card.innerHTML = `
-  <h2 class="text-xl font-bold mb-2">${opportunity.title}</h2>
-  <p class="text-gray-600 mb-2">${opportunity.company_name}</p>
-  <span class="text-sm text-gray-500 mb-4">${opportunity.location}</span>
-  <a href="${opportunity.url}" target="_blank" class="mt-auto bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition">
-    Apply Now
-  </a>
-`;
+  const data = await response.json();
+  if (response.ok) {
+    alert('Signup successful! Please log in.');
+    // Optionally switch to login view, auto-login, etc.
+  } else {
+    alert(data.error);
+  }
+});
 
+// Example for login
+document.getElementById('loginForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const email = e.target[0].value;
+  const password = e.target[1].value;
 
+  const response = await fetch('http://localhost:4000/auth/login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, password })
+  });
+  const data = await response.json();
+  if (response.ok) {
+    localStorage.setItem('jwt', data.token);
+    alert('Logged in!');
+    // Update UI to show profile/courses, etc.
+  } else {
+    alert(data.error);
+  }
+});

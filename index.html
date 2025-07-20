@@ -8,7 +8,10 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Google Fonts: Inter -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap" rel="stylesheet">
+<style>
     body {
       font-family: 'Inter', sans-serif;
       background: #f8f9fb;
@@ -18,6 +21,7 @@
       border: 1.5px solid #e3e4ea;
       box-shadow: 0 8px 28px 0 rgba(154,160,185,0.08), 0 1.5px 2.8px 0 rgba(36,40,52,0.03);
     }
+    
   </style>
 </head>
 <body class="bg-[#f8f9fb] min-h-screen">
@@ -26,27 +30,120 @@
   <div id="orivo-navbar" class="flex justify-center pt-10 select-none fixed top-0 z-50 w-full backdrop-blur-0 transition-all duration-300 p-8" id="orivo-navbar">
     <nav class="flex justify-between items-center w-[660px] bg-white rounded-full shadow-md px-8 py-3 border border-[#e3e4ea]">
       <!-- Left: Logo/Brand -->
-      <div class="text-2xl font-extrabold font-Steinerlight tracking-wider text-gray-900 select-none pl-1 pr-7">ORIVO</div>
+      <div class="text-2xl font-extrabold font-zen-antique-regular tracking-wider text-gray-900 select-none pl-1 pr-7">ORIVO</div>
       <!-- Right: Nav Links -->
       <div class="flex items-center gap-1">
         <a href="#home" class="px-5 py-2 rounded-full text-gray-800 text-sm font-semibold hover:bg-[#edeef2] transition">Home</a>
         <a href="#about" class="px-5 py-2 rounded-full text-gray-700 text-sm font-semibold hover:bg-[#edeef2] transition">About</a>
-        <a href="#apply" class="px-5 py-2 rounded-full text-gray-700 text-sm font-semibold hover:bg-[#edeef2] transition">Contact</a>
-        <a href="#demo" class="ml-3 bg-black text-white px-5 py-2 rounded-full text-sm font-extrabold tracking-wide shadow hover:bg-gray-900 transition">Apply</a>
+        <a href="#contact" class="px-5 py-2 rounded-full text-gray-700 text-sm font-semibold hover:bg-[#edeef2] transition">Contact</a>
+        <a href="#Apply" class="ml-3 bg-black text-white px-5 py-2 rounded-full text-sm font-extrabold tracking-wide shadow hover:bg-gray-900 transition">Apply</a>
         <button id="profileNavbarBtn" class="ml-4 w-9 h-9 rounded-full bg-gray-200 flex items-center justify-center border border-gray-300 hover:ring-2 hover:ring-indigo-400 transition-shadow overflow-hidden">
       <!-- Example profile image; use a real image or fallback initials/icon -->
       <img src="path-to-profile.jpg" alt="Profile" class="w-full h-full object-cover rounded-full" />
-      <!-- If no image, fallback initials or icon:
-      <span class="font-bold text-gray-700">A</span>
-      -->
+    
     </button>
     </div>
     </nav>
   </div>
-  <!-- User Profile Sidebar (Slides in from Right) -->
+<!-- User Profile Sidebar (Slides in from Right) -->
 <div id="userProfile"
   class="fixed top-0 right-0 h-full w-100 bg-[#ebecf0] rounded-l-3xl shadow-2xl transform translate-x-full transition-transform duration-500 ease-in-out z-50 overflow-y-auto flex flex-col">
-  <div class="p-6">
+  <!-- Auth Section (login/signup) -->
+ <div id="authSection" class="p-6">
+  <h2 id="authTitle" class="text-2xl font-bold mb-6">Login to your account</h2>
+  <div class="flex justify-center my-4">
+  <div class="relative inline-flex bg-white rounded-full shadow-md overflow-hidden" style="width: 220px; height: 44px;">
+    <!-- Animated background -->
+    <div id="tabBackground"
+      class="absolute top-0 left-0 h-full w-1/2 bg-gradient-to-r from-gray-800 to-gray-700 rounded-full transition-transform duration-500"
+      style="z-index:1; transform: translateX(0);"></div>
+    <button id="loginTab"
+      class="relative flex-1 z-10 py-2 font-semibold transition-colors text-black rounded-full focus:outline-none"
+      style="min-width: 110px;"
+      type="button">
+      Log In
+    </button>
+    <button id="signupTab"
+      class="relative flex-1 z-10 py-2 font-semibold transition-colors text-black rounded-full focus:outline-none"
+      style="min-width: 110px;"
+      type="button">
+      Sign Up
+    </button>
+  </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const tabBg = document.getElementById('tabBackground');
+  const loginTab = document.getElementById('loginTab');
+  const signupTab = document.getElementById('signupTab');
+  const loginForm = document.getElementById('loginForm');
+  const signupForm = document.getElementById('signupForm');
+  const authTitle = document.getElementById('authTitle');
+
+  let activeTab = 'login';
+  // Set initial active styling
+  loginTab.classList.add('text-white');
+  loginTab.classList.remove('text-black');
+
+  signupTab.classList.remove('text-white');
+  signupTab.classList.add('text-black');
+
+  loginTab.addEventListener('click', function() {
+    if (activeTab === 'login') return;
+    activeTab = 'login';
+    // Move background left
+    tabBg.style.transform = 'translateX(0)';
+    loginTab.classList.add('text-white');
+    loginTab.classList.remove('text-black');
+    signupTab.classList.remove('text-white');
+    signupTab.classList.add('text-black');
+    // Show login, hide signup
+    loginForm.classList.remove('hidden');
+    signupForm.classList.add('hidden');
+    authTitle.textContent = 'Login to your account';
+  });
+
+  signupTab.addEventListener('click', function() {
+    if (activeTab === 'signup') return;
+    activeTab = 'signup';
+    // Move background right
+    tabBg.style.transform = 'translateX(100%)';
+    signupTab.classList.add('text-white');
+    signupTab.classList.remove('text-black');
+    loginTab.classList.remove('text-white');
+    loginTab.classList.add('text-black');
+    // Show signup, hide login
+    signupForm.classList.remove('hidden');
+    loginForm.classList.add('hidden');
+    authTitle.textContent = 'Create your account';
+  });
+});
+</script>
+
+<!-- Login Form -->
+  <form id="loginForm" class="flex flex-col gap-4">
+    <input type="email" placeholder="Email" required class="border p-2 rounded-3xl" />
+    <input type="password" placeholder="Password" required class="border p-2 rounded-3xl" />
+    <button type="submit" class="bg-indigo-700 text-white font-bold py-2 rounded-full hover:bg-indigo-900 transition">Log In</button>
+   
+    <!-- Unified Capsule Switcher -->
+  
+
+  </form>
+
+  <!-- Sign Up Form -->
+  <form id="signupForm" class="flex flex-col gap-4 hidden">
+    <input type="text" placeholder="Name" required class="border p-2 rounded-3xl" />
+    <input type="email" placeholder="Email" required class="border p-2 rounded-3xl" />
+    <input type="password" placeholder="Password" required class="border p-2 rounded-3xl" />
+    <button type="submit" class="bg-indigo-700 text-white font-bold py-2 rounded-full hover:bg-indigo-900 transition">Log In</button>
+     </form>
+     
+</div>
+
+
+  <!-- Profile Section (only for logged-in users) -->
+  <div id="profileSection" class="p-6 hidden">
     <h2 class="text-2xl font-bold mb-6">Your Profile</h2>
     <!-- Internships/Startups Box -->
     <div class="mb-6 bg-white/70 rounded-xl shadow-md p-4">
@@ -67,12 +164,14 @@
       </ul>
     </div>
   </div>
+
   <!-- Close button -->
   <button id="closeProfileBtn"
     class="absolute top-4 left-4 text-gray-500 hover:text-gray-900 bg-white/60 rounded-full p-2 shadow transition">
     &times;
   </button>
 </div>
+
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
@@ -101,13 +200,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-    <!-- HOMEPAGE HERO -->
+    <!-- HOMEPAGE -->
     <section id="home" class="fade-in mt-24 w-full max-w-7xl h- orivo-card rounded-[38px] shadow-2xl flex flex-col md:flex-row items-center px-12 py-14 gap-12  mb-16 ">
-      <!-- Illustration: Use your own SVG for true match! -->
-      <div class="flex-1 flex justify-center">
-        <img src="https://cdni.iconscout.com/illustration/premium/thumb/strengths-and-skills-6392575-5290647.png"
+      
+      <div class="flex-1 w-200 h-200 flex justify-center">
+        <img src="./img/Launch.png"
              alt="Skills Illustration"
-             class="w-[240px] min-w-[170px] max-w-[260px] object-contain select-none rounded-2xl" draggable="false" />
+             class="w-[280px] min-w-[190px] max-w-[260px] object-contain select-none rounded-2xl" draggable="false" />
       </div>
       <!-- Tagline/Main Text -->
       <div class="flex-1 flex flex-col md:items-start items-center">
@@ -158,7 +257,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     <!-- APPLY SECTION: INTERNSHIPS & STARTUPS -->
-   <section class="w-full max-w-7xl  mx-auto rounded-3xl shadow-2xl bg-[#ebecf0] flex flex-col md:flex-row p-10 items-center justify-between mb-16 border border-[#e3e4ea] ">
+   <section class="w-full max-w-7xl  mx-auto rounded-3xl shadow-2xl bg-[#ebecf0] flex flex-col md:flex-row p-10 items-center justify-between mb-16 border border-[#e3e4ea] " id="Apply">
   <!-- Left: Internships -->
   <div class="flex-1 flex flex-col items-center text-center px-6 ">
     <h2 class="text-xl font-bold mb-2 text-gray-900">APPLY FOR INTERNSHIPS</h2>
@@ -183,8 +282,8 @@ document.addEventListener("DOMContentLoaded", function() {
     
 
     <!-- ABOUT SECTION (DETAILED) -->
-<section id="contact" class="w-full py-2 bg-neutral-900 text-white flex flex-col items-center mb-0">
-  <h2 class="text-3xl font-extrabold mb-6 pt-6">Contact Us</h2>
+<section id="contact" class="w-full fade-in py-2 bg-neutral-900 text-white flex flex-col items-center mb-0">
+  <h2 class="text-3xl font-zen-antique-regular font-extrabold mb-6 font-Arial pt-6">Contact Us</h2>
   <p class="text-neutral-200 max-w-3xl mx-auto mb-8 text-center">
     Reach out for collaborations, partnership opportunities, or questions!
   </p>
@@ -233,6 +332,54 @@ document.addEventListener("DOMContentLoaded", function() {
 </footer>
 
   </main>
+  <script>
+// SIGN UP
+document.getElementById('signupForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  const name = formData.get('Name') || e.target[0].value;
+  const email = formData.get('Email') || e.target[1].value;
+  const password = formData.get('Password') || e.target[2].value;
+
+  const response = await fetch('http://localhost:4000/auth/signup', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name, email, password })
+  });
+  const data = await response.json();
+  if (response.ok) {
+    alert('Sign up successful! Log in now.');
+    document.getElementById('loginTab').click(); // Switch to login tab
+  } else {
+    alert(data.error || 'Signup failed.');
+  }
+});
+
+// LOGIN
+document.getElementById('loginForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  const email = formData.get('Email') || e.target[0].value;
+  const password = formData.get('Password') || e.target[1].value;
+
+  const response = await fetch('http://localhost:4000/auth/login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, password })
+  });
+  const data = await response.json();
+  if (response.ok) {
+    localStorage.setItem('jwt', data.token);
+    alert('Login successful!');
+    // Show profile/courses
+    document.getElementById('authSection').classList.add('hidden');
+    document.getElementById('profileSection').classList.remove('hidden');
+  } else {
+    alert(data.error || 'Login failed.');
+  }
+});
+</script>
+
 <link rel="stylesheet" href="styles.css">
 <script src="main.js"></script>
 <div id="opportunities-list"></div>
